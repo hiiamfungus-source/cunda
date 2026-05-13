@@ -9,6 +9,7 @@ services:
   server:
     image: wealthfolio/wealthfolio:latest
     restart: unless-stopped
+    working_dir: /app
     volumes:
       - ${APP_DATA_DIR}/data:/data
       - ${APP_DATA_DIR}/.env:/app/.env:ro
