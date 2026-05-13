@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: cunda-wealthfolio
 name: Wealthfolio
-version: "1.0.1"
+version: "1.0.2"
 repo: https://github.com/wealthfolio/wealthfolio
 support: https://github.com/wealthfolio/wealthfolio/issues
 category: finance
@@ -14,6 +14,6 @@ website: https://wealthfolio.app
 icon: https://raw.githubusercontent.com/wealthfolio/wealthfolio/main/public/icon.png
 gallery:
   - https://wealthfolio.app/og-image.png
-releaseNotes: First Umbrel version - easy credential setup after install
+releaseNotes: v1.0.2 - Fixed installation with automatic credential setup
 dependencies: []
 port: 8088
