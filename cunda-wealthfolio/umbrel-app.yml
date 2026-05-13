@@ -5,15 +5,15 @@ version: "1.0.0"
 repo: https://github.com/wealthfolio/wealthfolio
 support: https://github.com/wealthfolio/wealthfolio/issues
 category: finance
-tagline: Portfolio tracker privato e open-source
+tagline: Private & open-source portfolio tracker
 description: >-
-  Wealthfolio è un tracker di investimenti privacy-first, local-first.
-  Traccia il tuo portafoglio, net worth e performance in modo semplice e sicuro direttamente su Umbrel.
+  Wealthfolio is a beautiful, privacy-first, local-first investment portfolio tracker.
+  Track your net worth, investments, performance, and more — all self-hosted on your Umbrel.
 developer: Wealthfolio Team
 website: https://wealthfolio.app
 icon: https://raw.githubusercontent.com/wealthfolio/wealthfolio/main/public/icon.png
 gallery:
   - https://wealthfolio.app/og-image.png
-releaseNotes: Prima versione su Umbrel Community Store
+releaseNotes: First version on Umbrel Community Store
 dependencies: []
 port: 8088
