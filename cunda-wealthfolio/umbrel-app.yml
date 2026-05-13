@@ -1,0 +1,19 @@
+manifestVersion: 1
+id: cunda-wealthfolio
+name: Wealthfolio
+version: "1.0.0"
+repo: https://github.com/wealthfolio/wealthfolio
+support: https://github.com/wealthfolio/wealthfolio/issues
+category: finance
+tagline: Portfolio tracker privato e open-source
+description: >-
+  Wealthfolio è un tracker di investimenti privacy-first, local-first.
+  Traccia il tuo portafoglio, net worth e performance in modo semplice e sicuro direttamente su Umbrel.
+developer: Wealthfolio Team
+website: https://wealthfolio.app
+icon: https://raw.githubusercontent.com/wealthfolio/wealthfolio/main/public/icon.png
+gallery:
+  - https://wealthfolio.app/og-image.png
+releaseNotes: Prima versione su Umbrel Community Store
+dependencies: []
+port: 8088
