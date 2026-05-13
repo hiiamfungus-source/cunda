@@ -1,10 +1,13 @@
 services:
-  app:
+  app_proxy:
+    environment:
+      APP_HOST: cunda-wealthfolio_server_1
+      APP_PORT: 8088
+
+  server:
     image: wealthfolio/wealthfolio:latest
     container_name: wealthfolio
     restart: unless-stopped
-    ports:
-      - "8088:8088"
     volumes:
       - ${APP_DATA_DIR}/data:/data
     environment:
@@ -19,8 +22,3 @@ services:
       timeout: 10s
       retries: 12
       start_period: 60s
-
-  app_proxy:
-    environment:
-      APP_HOST: app
-      APP_PORT: 8088
