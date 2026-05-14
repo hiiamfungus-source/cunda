@@ -1,19 +1,23 @@
-manifestVersion: 1
+manifestVersion: 1.0.0
 id: cunda-wealthfolio
 name: Wealthfolio
-version: "1.0.2"
-repo: https://github.com/wealthfolio/wealthfolio
-support: https://github.com/wealthfolio/wealthfolio/issues
+tagline: Il tuo tracker di investimenti open-source e self-hosted
+icon: https://raw.githubusercontent.com/hiiamfungus-source/cunda/master/cunda-wealthfolio/icon.png # Usa l'icona dal tuo repo
 category: finance
-tagline: Private & open-source portfolio tracker
-description: >-
-  Wealthfolio is a beautiful, privacy-first, local-first investment portfolio tracker.
-  Track your net worth, investments and performance — fully self-hosted on Umbrel.
-developer: Wealthfolio Team
-website: https://wealthfolio.app
-icon: https://raw.githubusercontent.com/wealthfolio/wealthfolio/main/public/icon.png
-gallery:
-  - https://wealthfolio.app/og-image.png
-releaseNotes: v1.0.2 - Fixed installation with automatic credential setup
-dependencies: []
+version: 1.0.0
 port: 8088
+description: >-
+  Wealthfolio è un tracker di investimenti self-hosted. 
+  Al primo avvio, il sistema genererà automaticamente una password sicura per te.
+  **Per trovarla, apri l'app e clicca sull'icona "Logs" (Terminale) in alto a destra**: 
+  troverai la password temporanea stampata nei log. Usala per accedere e impostare la tua password definitiva.
+developer: Wealthfolio
+website: https://wealthfolio.app
+submitter: hiiamfungus-source
+repo: https://github.com/hiiamfungus-source/cunda/tree/master/cunda-wealthfolio
+support: https://github.com/wealthfolio/wealthfolio/issues
+gallery:
+  - https://wealthfolio.app/og.png
+path: ""
+defaultUsername: ""
+defaultPassword: "Controlla i Log dell'App"
