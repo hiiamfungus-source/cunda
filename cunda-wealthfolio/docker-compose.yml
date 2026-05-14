@@ -1,30 +1,18 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: cunda-wealthfolio_server_1
-      APP_PORT: 8088
-
-  server:
-    image: wealthfolio/wealthfolio:latest
-    restart: unless-stopped
-    working_dir: /app
-    expose:
+  app: # CRITICO: Deve chiamarsi 'app' per il proxy di Umbrel
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: cunda-wealthfolio
+    expose: # CRITICO: Usa expose, non ports
       - "8088"
     volumes:
-      - ${APP_DATA_DIR}/data:/data
-      - ${APP_DATA_DIR}/.env:/app/.env:ro
-    environment:
-      WF_LISTEN_ADDR: "0.0.0.0:8088"
-      WF_DB_PATH: "/data/wealthfolio.db"
-      WF_CORS_ALLOW_ORIGINS: "*"
-      WF_SECRET_KEY: "${WF_SECRET_KEY:-}"
-      WF_AUTH_PASSWORD_HASH: "${WF_AUTH_PASSWORD_HASH:-}"
-      WF_AUTH_REQUIRED: "true"
-    healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:8088/api/v1/healthz"]
-      interval: 30s
-      timeout: 15s
-      retries: 20
-      start_period: 60s
+      - ${APP_DATA_DIR}/data:/app/data
+    networks:
+      - umbrel_mainnet # CRITICO: Rete per farsi trovare dal proxy
+
+networks:
+  umbrel_mainnet:
+    external: true
